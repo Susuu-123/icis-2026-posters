@@ -9,7 +9,7 @@ Built and tested end-to-end on 2026-06-30. Audience flow:
 - **Form (live):** https://docs.google.com/forms/d/e/1FAIpQLSf60k_W-wB7529LJjCtBqZc_dtjT4xlI1qdT4QkkZND2DSCyQ/viewform
 - **Form (edit):** https://docs.google.com/forms/d/1ZHx-MWnYwa5hLn3LMGJZo2DeE0xS9NfmYwy8qgFh7F8/edit
 - **Responses sheet:** https://docs.google.com/spreadsheets/d/1CNLvLf-4XjDYzIuGU4lxescuWVLx3s2cmH_sjXaumVA/edit
-- **Poster PDF:** https://github.com/Susuu-123/icis-2026-posters/blob/master/Su_etal_ICIS2026_same-different.pdf
+- **Poster PDF (direct):** https://susuu-123.github.io/icis-2026-posters/ICIS2026_same-different.pdf
 
 ## Poster 2 — "Representing the Unseen"
 - **QR code (print this):** `qr/QR_Poster2_Unseen.svg` or `.png`
@@ -17,7 +17,7 @@ Built and tested end-to-end on 2026-06-30. Audience flow:
 - **Form (live):** https://docs.google.com/forms/d/e/1FAIpQLSfwMLoYQbjRhwN9hO9E2kHTKc7NxebRQY7jRuuBCUYeYHVM4A/viewform
 - **Form (edit):** https://docs.google.com/forms/d/1R0QK1GzzMR_Ao3NPcua4fKgdFY4RrbIvUQAmuXttf20/edit
 - **Responses sheet:** https://docs.google.com/spreadsheets/d/1BkCTEzOQBBsy9SpVoD7ddHynR_IyuLekH24Fyn6AJUA/edit
-- **Poster PDF:** https://github.com/Susuu-123/icis-2026-posters/blob/master/Su_etal_ICIS2026_representing-the-unseen.pdf
+- **Poster PDF (direct):** https://susuu-123.github.io/icis-2026-posters/ICIS2026_representing-the-unseen.pdf
 
 ## Form fields (both forms)
 Name (required) · Email (required, validated) · Affiliation / Institution (optional) ·
