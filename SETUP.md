@@ -1,9 +1,9 @@
-# ICIS 2026 Poster QR — Setup & Links (everything is live)
+# ICIS 2026 Poster QR: Setup & Links (everything is live)
 
 Built and tested end-to-end on 2026-06-30. Audience flow:
 **Scan QR → branded landing page → embedded Google Form → response saved to Google Sheet → (optional) email to Dr. Luchkina.**
 
-## Poster 1 — "Same / Different"
+## Poster 1: "Same / Different"
 - **QR code (print this):** `qr/QR_Poster1_SameDiff.svg` (vector, best for print) or `.png`
 - **Landing page:** https://susuu-123.github.io/icis-2026-posters/poster1.html
 - **Form (live):** https://docs.google.com/forms/d/e/1FAIpQLSf60k_W-wB7529LJjCtBqZc_dtjT4xlI1qdT4QkkZND2DSCyQ/viewform
@@ -11,7 +11,7 @@ Built and tested end-to-end on 2026-06-30. Audience flow:
 - **Responses sheet:** https://docs.google.com/spreadsheets/d/1CNLvLf-4XjDYzIuGU4lxescuWVLx3s2cmH_sjXaumVA/edit
 - **Poster PDF (direct):** https://susuu-123.github.io/icis-2026-posters/ICIS2026_same-different.pdf
 
-## Poster 2 — "Representing the Unseen"
+## Poster 2: "Representing the Unseen"
 - **QR code (print this):** `qr/QR_Poster2_Unseen.svg` or `.png`
 - **Landing page:** https://susuu-123.github.io/icis-2026-posters/poster2.html
 - **Form (live):** https://docs.google.com/forms/d/e/1FAIpQLSfwMLoYQbjRhwN9hO9E2kHTKc7NxebRQY7jRuuBCUYeYHVM4A/viewform
@@ -25,9 +25,9 @@ Your question or comment (required) · Which part of the poster are you asking a
 Consent checkbox (required).
 
 ## Current status: Sheet-only (no email)
-Responses are saved to the sheets only — no email is sent (per your choice).
+Responses are saved to the sheets only. No email is sent (per your choice).
 
-## Phase 2 — turn on email notifications to Dr. Luchkina (optional, later)
+## Phase 2: turn on email notifications to Dr. Luchkina (optional, later)
 1. Open the responses **Google Sheet** for a poster → **Extensions → Apps Script**.
 2. Paste the matching file: `apps-script-poster1.gs` (Poster 1) or `apps-script-poster2.gs` (Poster 2).
 3. **Triggers** (clock icon) → **Add Trigger** → function `onFormSubmit`,
@@ -37,5 +37,5 @@ Responses are saved to the sheets only — no email is sent (per your choice).
 
 ## Notes
 - A standalone Apps Script project named "Untitled project" was used only to *build* these
-  forms/sheets. You can delete it from script.google.com — it is not needed to run anything.
+  forms/sheets. You can delete it from script.google.com. It is not needed to run anything.
 - One empty stray "Untitled form" may exist in your Drive from setup; safe to delete.

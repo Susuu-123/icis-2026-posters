@@ -20,7 +20,7 @@ CARDS = [
         "qr": QR_DIR + r"\QR_Poster1_SameDiff.png",
         "eyebrow": "UT DALLAS  |  Early Cognition and Communication Lab",
         "heading": "Have a question or comment?",
-        "instruction": "Scan to leave a question — we'll follow up by email.",
+        "instruction": "Scan to leave a question and we'll follow up by email.",
         "study": "Learning “same” and “different” in infancy",
         "authors": "Elena Luchkina & Elizabeth Spelke",
         "affil": "The University of Texas at Dallas  ·  Harvard University",
@@ -94,16 +94,26 @@ def para(cell, text=None, size=12, color=DARK, bold=False, italic=False,
     return p
 
 
-def divider(cell, color=ORANGE, width_pt=24):
+def divider(cell, color_hex="E87500", indent_cm=5.0, thickness=28, space_before=2, space_after=10):
+    """A short, centered horizontal rule drawn as a real paragraph border (no dash characters)."""
     p = cell.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.paragraph_format.space_before = Pt(2)
-    p.paragraph_format.space_after = Pt(10)
-    run = p.add_run("————")
-    run.font.name = FONT
-    run.font.size = Pt(width_pt)
-    run.font.bold = True
-    run.font.color.rgb = color
+    pf = p.paragraph_format
+    pf.space_before = Pt(space_before)
+    pf.space_after = Pt(space_after)
+    pf.left_indent = Cm(indent_cm)
+    pf.right_indent = Cm(indent_cm)
+    pPr = p._p.get_or_add_pPr()
+    pbdr = OxmlElement("w:pBdr")
+    bottom = OxmlElement("w:bottom")
+    bottom.set(qn("w:val"), "single")
+    bottom.set(qn("w:sz"), str(thickness))
+    bottom.set(qn("w:space"), "1")
+    bottom.set(qn("w:color"), color_hex)
+    pbdr.append(bottom)
+    pPr.append(pbdr)
+    r = p.add_run(" ")
+    r.font.size = Pt(2)
 
 
 doc = Document()
@@ -133,21 +143,13 @@ for i, c in enumerate(CARDS):
 
     para(cell, c["eyebrow"], size=10.5, color=GREEN, bold=True, caps=True,
          space_before=2, space_after=4)
-    divider(cell, ORANGE)
+    divider(cell, "E87500")
     para(cell, c["heading"], size=22, color=GREEN, bold=True, space_before=2, space_after=12)
     para(cell, image=c["qr"], image_cm=6.6, space_before=4, space_after=12)
     para(cell, c["instruction"], size=13.5, color=DARK, space_before=2, space_after=14)
     para(cell, c["study"], size=11.5, color=GRAY, italic=True, space_before=2, space_after=10)
-    # bottom green divider
-    bp = cell.add_paragraph()
-    bp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    bp.paragraph_format.space_before = Pt(4)
-    bp.paragraph_format.space_after = Pt(8)
-    br = bp.add_run("————")
-    br.font.name = FONT
-    br.font.size = Pt(16)
-    br.font.bold = True
-    br.font.color.rgb = GREEN
+    # bottom green rule
+    divider(cell, "154734", thickness=18, space_before=4, space_after=8)
     para(cell, c["authors"], size=11.5, color=GREEN, bold=True, space_before=2, space_after=1)
     para(cell, c["affil"], size=9.5, color=GRAY, space_before=0, space_after=2)
 

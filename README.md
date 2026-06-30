@@ -1,4 +1,4 @@
-# ICIS 2026 Posters — Early Cognition and Communication Lab (UT Dallas)
+# ICIS 2026 Posters: Early Cognition and Communication Lab (UT Dallas)
 
 Posters presented at the International Congress of Infant Studies (ICIS) 2026 by the
 Early Cognition and Communication Lab (ECCL), The University of Texas at Dallas.
