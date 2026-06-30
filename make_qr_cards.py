@@ -22,6 +22,7 @@ CARDS = [
         "heading": "Have a question or comment?",
         "instruction": "Scan to leave a question — we'll follow up by email.",
         "study": "Learning “same” and “different” in infancy",
+        "lead": "Research led by Dr. Elena Luchkina",
         "footer": "Early Cognition and Communication Lab  ·  The University of Texas at Dallas",
     },
     {
@@ -30,6 +31,7 @@ CARDS = [
         "heading": "Interested in this study?",
         "instruction": "Scan to ask a question or share a comment.",
         "study": "How infants represent unseen objects",
+        "lead": "Research led by Dr. Elena Luchkina",
         "footer": "Early Cognition and Communication Lab  ·  The University of Texas at Dallas",
     },
 ]
@@ -146,6 +148,7 @@ for i, c in enumerate(CARDS):
     br.font.size = Pt(16)
     br.font.bold = True
     br.font.color.rgb = GREEN
+    para(cell, c["lead"], size=11.5, color=GREEN, bold=True, space_before=2, space_after=2)
     para(cell, c["footer"], size=10, color=GRAY, space_before=2, space_after=2)
 
 out = r"C:\Users\lanli\icis-2026-posters\ICIS2026_QR_Scan_Cards.docx"
