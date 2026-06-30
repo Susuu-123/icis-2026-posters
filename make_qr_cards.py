@@ -23,7 +23,7 @@ CARDS = [
         "instruction": "Scan to leave a question — we'll follow up by email.",
         "study": "Learning “same” and “different” in infancy",
         "authors": "Elena Luchkina & Elizabeth Spelke",
-        "footer": "Early Cognition and Communication Lab  ·  The University of Texas at Dallas",
+        "affil": "The University of Texas at Dallas  ·  Harvard University",
     },
     {
         "qr": QR_DIR + r"\QR_Poster2_Unseen.png",
@@ -32,7 +32,7 @@ CARDS = [
         "instruction": "Scan to ask a question or share a comment.",
         "study": "How infants represent unseen objects",
         "authors": "Elena Luchkina, Emily Yang & Sandra Waxman",
-        "footer": "Early Cognition and Communication Lab  ·  The University of Texas at Dallas",
+        "affil": "The University of Texas at Dallas  ·  Northwestern University",
     },
 ]
 
@@ -148,8 +148,8 @@ for i, c in enumerate(CARDS):
     br.font.size = Pt(16)
     br.font.bold = True
     br.font.color.rgb = GREEN
-    para(cell, c["authors"], size=11.5, color=GREEN, bold=True, space_before=2, space_after=2)
-    para(cell, c["footer"], size=10, color=GRAY, space_before=2, space_after=2)
+    para(cell, c["authors"], size=11.5, color=GREEN, bold=True, space_before=2, space_after=1)
+    para(cell, c["affil"], size=9.5, color=GRAY, space_before=0, space_after=2)
 
 out = r"C:\Users\lanli\icis-2026-posters\ICIS2026_QR_Scan_Cards.docx"
 doc.save(out)
