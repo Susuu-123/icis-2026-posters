@@ -87,7 +87,7 @@
         var holder = document.getElementById("formslot");
         if (FORM_EMBED_URL && FORM_EMBED_URL.indexOf("http") === 0){
           var f = document.createElement("iframe");
-          f.src = FORM_EMBED_URL; f.loading = "lazy";
+          f.src = FORM_EMBED_URL;
           f.title = "Question form"; holder.innerHTML = ""; holder.appendChild(f);
         }
       });
