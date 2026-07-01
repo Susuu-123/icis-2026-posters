@@ -11,7 +11,7 @@
  */
 const POSTER_TITLE = "Learning abstract relational terms in infancy based on cross-situational contrastive labeling";
 const NOTIFY_TO    = "elena.luchkina@utdallas.edu";
-const SUBJECT_TAG  = "[ICIS 2026 · Same/Different poster]";
+const EMAIL_SUBJECT = "ICIS Poster Question: Same and Different";
 
 function onFormSubmit(e) {
   const v = e.namedValues;
@@ -24,7 +24,7 @@ function onFormSubmit(e) {
   const part        = get("Which part of the poster are you asking about?");
   const submitted   = get("Timestamp");
 
-  const subject = SUBJECT_TAG + " New question from " + name;
+  const subject = EMAIL_SUBJECT;
 
   const body =
     "You received a new question/comment from your ICIS 2026 poster.\n\n" +
@@ -35,7 +35,7 @@ function onFormSubmit(e) {
     "Affiliation:     " + affiliation + "\n" +
     "Poster section:  " + part + "\n\n" +
     "Question / comment:\n" + comment + "\n\n" +
-    "— Reply directly to this email to respond to the visitor (Reply-To is set to their address).";
+    "To respond to the visitor, reply directly to this email (Reply-To is set to their address).";
 
   MailApp.sendEmail({
     to: NOTIFY_TO,
